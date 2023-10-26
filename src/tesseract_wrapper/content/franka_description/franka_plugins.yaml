@@ -1,0 +1,28 @@
+kinematic_plugins:
+  search_paths:
+    - /usr/local/lib
+  search_libraries:
+    - tesseract_kinematics_kdl_factories
+  fwd_kin_plugins:
+    manipulator:
+      default: KDLFwdKinChain
+      plugins:
+        KDLFwdKinChain:
+          class: KDLFwdKinChainFactory
+          config:
+            base_link: panda_link0
+            tip_link: right_gripper
+  inv_kin_plugins:
+    manipulator:
+      default: KDLInvKinChainLMA
+      plugins:
+        KDLInvKinChainLMA:
+          class: KDLInvKinChainLMAFactory
+          config:
+            base_link: panda_link0
+            tip_link: right_gripper
+        KDLInvKinChainNR:
+          class: KDLInvKinChainNRFactory
+          config:
+            base_link: panda_link0
+            tip_link: right_gripper

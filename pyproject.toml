@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tesseract_wrapper"
+version = "0.1.0"
+description = "A python wrapper for using Tesseract's motion planner"
+authors = ["Balakumar Sundaralingam"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+numpy = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
